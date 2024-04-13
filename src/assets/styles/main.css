@@ -1,0 +1,15 @@
+html {
+    background-color: #CCC6BE;
+}
+
+body {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.main {
+    height: calc(100vh - 88px);
+    border: none;
+}

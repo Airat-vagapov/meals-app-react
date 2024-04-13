@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    padding: 20px 0;
+}
+
+.headerTitle {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+}

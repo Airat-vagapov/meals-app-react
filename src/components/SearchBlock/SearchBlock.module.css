@@ -1,0 +1,40 @@
+.searchBlock {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.searchForm {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.searchForm form {
+    width: 100%;
+}
+
+.searchForm input {
+    width: 100%;
+    border-radius: 32px;
+    background-color: #fff;
+    font-family: "Merriweather", serif;
+    font-size: 40px;
+    line-height: 48px;
+    padding: 24px 20px;
+    color: #000;
+    border: 1px solid transparent;
+}
+
+.searchForm input::placeholder {
+    color: #5f5e5e;
+}
+
+.searchForm input:focus {
+    border-color: #000;
+}
+
+.searchForm input:focus::placeholder {
+    opacity: 0;
+}
