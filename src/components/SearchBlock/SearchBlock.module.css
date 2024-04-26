@@ -1,7 +1,7 @@
 .searchBlock {
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .searchForm {
@@ -25,14 +25,17 @@
     padding: 24px 20px;
     color: #000;
     border: 1px solid transparent;
+    transition: all .3s ease;
 }
 
 .searchForm input::placeholder {
     color: #5f5e5e;
+    transition: all .3s ease
 }
 
 .searchForm input:focus {
     border-color: #000;
+    transition: all .3s ease
 }
 
 .searchForm input:focus::placeholder {

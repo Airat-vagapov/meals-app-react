@@ -13,3 +13,14 @@ body {
     height: calc(100vh - 88px);
     border: none;
 }
+
+.textLink {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    transition: all .3s ease;
+}
+
+.textLink:hover {
+    color: #8e8a85;
+}

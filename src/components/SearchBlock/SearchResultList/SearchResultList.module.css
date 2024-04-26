@@ -1,0 +1,19 @@
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+li {
+    padding: 12px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.mealName {}
+
+.mealCountry {}
+
+.mealCategory {}
+
+.mealImage {}
