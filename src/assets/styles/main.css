@@ -24,3 +24,7 @@ body {
 .textLink:hover {
     color: #8e8a85;
 }
+
+.textLink--mtAuto {
+    margin-top: auto;
+}

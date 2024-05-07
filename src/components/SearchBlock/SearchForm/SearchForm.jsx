@@ -18,16 +18,18 @@ export default function SearchForm({ onSubmit }) {
     });
     return (
         <form onSubmit={formik.OnSubmit}>
-            <input
-                type="text"
-                id='query'
-                name='query'
-                placeholder="Enter the name of a meal"
-                onChange={(e) => {
-                    formik.handleChange(e)
-                    formik.handleSubmit()
-                }}
-                values={formik.values.query} />
+            <div>
+                <input
+                    type="text"
+                    id='query'
+                    name='query'
+                    placeholder="Enter the name of a meal"
+                    onChange={(e) => {
+                        formik.handleChange(e)
+                        formik.handleSubmit()
+                    }}
+                    values={formik.values.query} />
+            </div>
         </form>
 
     )

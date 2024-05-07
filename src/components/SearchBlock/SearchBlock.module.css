@@ -4,6 +4,12 @@
     align-items: flex-start;
 }
 
+.searchBlock__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .searchForm {
     display: flex;
     align-items: center;
@@ -16,13 +22,15 @@
 }
 
 .searchForm input {
-    width: 100%;
+    /* width: 100%; */
+    width: -webkit-fill-available;
     border-radius: 32px;
     background-color: #fff;
     font-family: "Merriweather", serif;
     font-size: 40px;
     line-height: 48px;
     padding: 24px 20px;
+    padding-right: 0;
     color: #000;
     border: 1px solid transparent;
     transition: all .3s ease;

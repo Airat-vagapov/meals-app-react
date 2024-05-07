@@ -1,6 +1,7 @@
-export default function TextLink({ children, link }) {
-
+export default function TextLink({ children, link, mt }) {
+    let mtClassName
+    if (mt) mtClassName = 'textLink--mtAuto'
     return (
-        <a className={'textLink'} href={link}>{children}</a>
+        <a className={`textLink ${mtClassName}` } href={link}>{children}</a>
     )
 }

@@ -9,20 +9,20 @@ export default function SearchBlock() {
 
     let dataIsReady = false;
     searchResult != null && searchResult.length > 0 ? dataIsReady = true : dataIsReady = false
-    
+
 
     return (
         <div className={styles.searchBlock}>
             <Container>
-                <div className={styles.searchForm}>
-                    <SearchForm onSubmit={setSearchResult} />
-                </div>
-
-                {dataIsReady &&
-                    <div>
-                        <SearchResultList data={searchResult} />
+                <div className={styles.searchBlock__inner}>
+                    <div className={styles.searchForm}>
+                        <SearchForm onSubmit={setSearchResult} />
                     </div>
-                }
+
+                    {dataIsReady &&
+                        <SearchResultList data={searchResult} />
+                    }
+                </div>
 
             </Container>
         </div>
