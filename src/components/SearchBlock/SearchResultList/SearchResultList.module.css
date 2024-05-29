@@ -13,6 +13,7 @@ li {
 .meal {
     display: flex;
     gap: 20px;
+    padding: 20px;
 }
 
 .mealImageContainer img {
@@ -33,4 +34,16 @@ li {
 .mealName {
     font-size: 32px;
     line-height: 40px;
+}
+
+.meal a {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    transition: all .3s ease;
+    margin-top: auto;
+}
+
+.meal a:hover {
+    color: #8e8a85;
 }

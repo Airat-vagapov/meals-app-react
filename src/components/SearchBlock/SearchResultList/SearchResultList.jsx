@@ -1,6 +1,7 @@
 import styles from './SearchResultList.module.css'
 import TextLink from '../../UI/TextLink.jsx'
 import Tags from '../../UI/Tags/Tags.jsx';
+import { Outlet, Link } from "react-router-dom";
 
 const SearchResultList = ({ data }) => {
     console.log(data)
@@ -12,14 +13,14 @@ const SearchResultList = ({ data }) => {
                 <li key={meal.idMeal}>
 
                     <div className={styles.meal}>
-                        <div className={styles.mealImageContainer}>
+                        <a href='' className={styles.mealImageContainer}>
                             <img className={styles.mealImage} src={meal.strMealThumb} alt="" />
-                        </div>
+                        </a>
                         <div className={styles.mealContent}>
                             <p className={styles.mealName}>{meal.strMeal}</p>
 
                             <Tags data={[meal.strArea, meal.strCategory]} />
-                            <TextLink mt={true}>Show more</TextLink>
+                            <Link className='textLink' to={`meals/${meal.idMeal}`}>Show more</Link>
                         </div>
                     </div>
                 </li>
