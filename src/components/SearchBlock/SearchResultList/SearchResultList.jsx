@@ -4,9 +4,6 @@ import Tags from '../../UI/Tags/Tags.jsx';
 import { Outlet, Link } from "react-router-dom";
 
 const SearchResultList = ({ data }) => {
-    console.log(data)
-
-
     return (
         <ul>
             {data && data.map((meal) => (
