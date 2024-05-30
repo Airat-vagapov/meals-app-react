@@ -6,7 +6,7 @@ export default function Header() {
         <header className={styles.header}>
             <Container>
                 <div className={styles.headerTitle}>
-                    <p>Meals App</p>
+                    <a href='/'>Meals App</a>
                 </div>
             </Container>
         </header>

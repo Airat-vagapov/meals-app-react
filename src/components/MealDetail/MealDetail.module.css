@@ -1,0 +1,35 @@
+.meal .tag {
+    background-color: #fff;
+}
+
+.mealContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.mealTitle {
+    font-size: 40px;
+}
+
+.mealHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mealHead__left,
+.mealHead__right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mealDetail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mealList {
+    width: 100%;
+}

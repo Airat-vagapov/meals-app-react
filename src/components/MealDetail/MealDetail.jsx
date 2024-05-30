@@ -2,6 +2,8 @@ import Container from "/src//components/Container/Container.jsx"
 import Tags from "/src/components/UI/Tags/Tags.jsx"
 import MealList from '/src/components/MealDetail/MealList/MealList.jsx'
 
+import styles from '/src/components/MealDetail/MealDetail.module.css'
+
 export default function MealDetail({ data }) {
 
     console.log(data)
@@ -23,28 +25,44 @@ export default function MealDetail({ data }) {
             ingridientsArr.push(ingridient)
         }
 
-        if (key.includes('strTags') && data[key] != '') {
+        if (key.includes('strTags') && data[key] != '' && data[key] != null) {
             tags = data[key].split(',')
         }
 
     }
 
-    console.log(tags)
-
-
-
     return (
         <>
-            <Container >
-                <p>{data.strMeal}</p>
-                <Tags data={[data.strArea, data.strCategory, tags]} />
-                <img src={data.strMealThumb} />
+            <div className={styles.meal}>
+                <Container >
+                    <div className={styles.mealContent}>
+                        <div className={styles.mealHead}>
+                            <div className={styles.mealHead__left}>
+                                <p className={styles.mealTitle}>{data.strMeal}</p>
+                                {tags != undefined
+                                    ? <Tags data={[data.strArea, data.strCategory, ...tags]} color={'white'} />
+                                    : <Tags data={[data.strArea, data.strCategory]} color={'white'} />}
+                            </div>
+                            <div className={styles.mealHead__right}>
+                                <a href={data.strYoutube}>Youtube</a>
+                                <a href={data.strSource}>Source</a>
+                            </div>
+                        </div>
 
-                <p>{data.strInstructions}</p>
+                        <div className={styles.mealDetail}>
+                            <MealList data={ingridientsArr} />
+                            <img src={data.strMealThumb} />
 
-                <MealList data={ingridientsArr} />
-            </Container>
 
+                        </div>
+                        <p>{data.strInstructions}</p>
+
+
+                    </div>
+
+                </Container>
+
+            </div>
         </>
     )
 }
