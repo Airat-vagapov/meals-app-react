@@ -33,35 +33,39 @@ export default function MealDetail({ data }) {
 
     return (
         <>
-            <div className={styles.meal}>
-                <Container >
-                    <div className={styles.mealContent}>
-                        <div className={styles.mealHead}>
-                            <div className={styles.mealHead__left}>
-                                <p className={styles.mealTitle}>{data.strMeal}</p>
-                                {tags != undefined
-                                    ? <Tags data={[data.strArea, data.strCategory, ...tags]} color={'white'} />
-                                    : <Tags data={[data.strArea, data.strCategory]} color={'white'} />}
+            <div className="section">
+                <div className={styles.meal}>
+                    <Container >
+                        <div className={styles.mealContent}>
+                            <div className={styles.mealDetail}>
+                                <img src={data.strMealThumb} />
+                                <div className={styles.mealInfo}>
+                                    <div className={styles.mealInfo__head}>
+                                        <p className={styles.mealTitle}>{data.strMeal}</p>
+                                        {tags != undefined
+                                            ? <Tags data={[data.strArea, data.strCategory, ...tags]} />
+                                            : <Tags data={[data.strArea, data.strCategory]} />}
+                                    </div>
+                                    <MealList data={ingridientsArr} title={'Ingredients'} />
+
+                                    <div className={styles.mealInfo__source}>
+                                        <a href={data.strYoutube}>Youtube</a>
+                                        <a href={data.strSource}>Source</a>
+                                    </div>
+                                </div>
+
+
+
                             </div>
-                            <div className={styles.mealHead__right}>
-                                <a href={data.strYoutube}>Youtube</a>
-                                <a href={data.strSource}>Source</a>
-                            </div>
+                            <p className="title24">Instructions</p>
+                            <p>{data.strInstructions}</p>
+
+
                         </div>
 
-                        <div className={styles.mealDetail}>
-                            <MealList data={ingridientsArr} />
-                            <img src={data.strMealThumb} />
+                    </Container>
 
-
-                        </div>
-                        <p>{data.strInstructions}</p>
-
-
-                    </div>
-
-                </Container>
-
+                </div>
             </div>
         </>
     )

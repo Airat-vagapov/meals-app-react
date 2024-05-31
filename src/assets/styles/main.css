@@ -9,9 +9,19 @@ body {
     font-size: 20px;
 }
 
+.section {
+    padding-bottom: 80px;
+}
+
 .main {
     height: calc(100vh - 88px);
     border: none;
+}
+
+.title24 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
 }
 
 .textLink {

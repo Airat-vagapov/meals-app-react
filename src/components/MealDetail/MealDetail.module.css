@@ -6,6 +6,9 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    /* padding: 20px;
+    background-color: #fff;
+    border-radius: 12px; */
 }
 
 .mealTitle {
@@ -27,9 +30,56 @@
 
 .mealDetail {
     display: flex;
-    justify-content: space-between;
+    gap: 40px;
+}
+
+.mealDetail img {
+    border-radius: 14px;
+}
+
+.mealInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.mealInfo__head,
+.mealInfo__source {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mealListBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mealListTitle {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
 }
 
 .mealList {
     width: 100%;
+}
+
+
+.mealListItem {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.mealList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
 }
