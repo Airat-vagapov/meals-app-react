@@ -33,12 +33,18 @@
     gap: 40px;
 }
 
+.mealDetail__image {
+    width: 50%;
+}
+
 .mealDetail img {
     border-radius: 14px;
+    width: 100%;
 }
 
 .mealInfo {
     width: 100%;
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     gap: 24px;

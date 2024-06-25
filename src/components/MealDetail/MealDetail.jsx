@@ -1,6 +1,7 @@
 import Container from "/src//components/Container/Container.jsx"
 import Tags from "/src/components/UI/Tags/Tags.jsx"
 import MealList from '/src/components/MealDetail/MealList/MealList.jsx'
+import YoutubeButton from "/src/components/UI/YoutubeButton/YoutubeButton.jsx"
 
 import styles from '/src/components/MealDetail/MealDetail.module.css'
 
@@ -38,7 +39,9 @@ export default function MealDetail({ data }) {
                     <Container >
                         <div className={styles.mealContent}>
                             <div className={styles.mealDetail}>
-                                <img src={data.strMealThumb} />
+                                <div className={styles.mealDetail__image}>
+                                    <img src={data.strMealThumb} />
+                                </div>
                                 <div className={styles.mealInfo}>
                                     <div className={styles.mealInfo__head}>
                                         <p className={styles.mealTitle}>{data.strMeal}</p>
@@ -49,13 +52,10 @@ export default function MealDetail({ data }) {
                                     <MealList data={ingridientsArr} title={'Ingredients'} />
 
                                     <div className={styles.mealInfo__source}>
-                                        <a href={data.strYoutube}>Youtube</a>
-                                        <a href={data.strSource}>Source</a>
+                                        <YoutubeButton src={data.strYoutube} />
+                                        <a href={data.strSource} className="textLink">Source</a>
                                     </div>
                                 </div>
-
-
-
                             </div>
                             <p className="title24">Instructions</p>
                             <p>{data.strInstructions}</p>
